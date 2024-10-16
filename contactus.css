@@ -417,10 +417,5 @@ textarea {
         width: 20%;
     }
 
-    .mainsectionrow2navulbutton {
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        padding-top: 2px !important;
-    }
+   
 }
