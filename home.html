@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script></script>
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+        <style>
+            .section1-btn1 {
+                padding: 10px 20px;
+                font-size: 1rem;
+                /* background-color: none; */
+                color: white;
+                /* border:#E4A736 solid2px ; */
+                border-radius: 5px;
+                cursor: pointer;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+    
+            .section1-btn1:hover{
+                transform: scale(1.1); /* The button will grow by 10% */
+                background-color: #E4A736 /* Change the background color on hover */
+            }
+        </style>
+
+<!-- <.............section2 style..............> -->
+
+    <style>
+
+
+.section2-box1, .section2-box2, .section2-box3 {
+            /* width: 30%; */
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: zoomInOut 3s infinite ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        .sec2-img1, .sec2-img2, .sec2-img3 {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Zoom In and Zoom Out Animation */
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1); /* Zoom In */
+            }
+            100% {
+                transform: scale(1); /* Zoom Out */
+            }
+        }
+
+        /* Hover Effect to pause animation */
+        .section2-box1:hover, .section2-box2:hover, .section2-box3:hover {
+            animation-play-state: paused; /* Pause animation on hover */
+            transform: scale(1.05); /* Slight scaling on hover */
+        }
+    </style>
+
+<!-- <........................style section3..........> -->
+    
+
+
+<!-- <....................section4................> -->
+ <style>
+.section3-para1 {
+  /* font-family: 'Courier', monospace; */
+  font-size: 2rem;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30, end) infinite, blink 0.75s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+    
+
+
+
+/* <.................................hjn.............> */
+.typing {
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+</style>
+<!-- <..........................section4...............> -->
+ <style>
+
+  
+/* Initial state for zoom animation */
+.section4 {
+    transition: transform 0.6s ease; /* Smooth transition for transformations */
+}
+
+/* Zoom-in and zoom-out animation */
+.zoom {
+    animation: zoomInOut 3s infinite; /* Animation name and duration */
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.05); /* Zoom in to 105% */
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+    }
+}
+
+/* Stop animation on hover */
+.section4:hover {
+    animation: none; /* Disable animation */
+    transform: scale(1); /* Keep section at normal size */
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+<!-- <.............................section5 style.................> -->
+<style>
+    .section5-left-p1 {
+        /* font-family: 'Courier', monospace;
+        font-size: 24px; */
+        border-right: 2px solid;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+        display: inline-block;
+        animation: typing 3s steps(27, end) infinite, blink 0.75s step-end infinite alternate;
+      }
+      
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      
+      @keyframes blink {
+        50% { border-color: transparent; }
+      }
+         
+    
+</style>
+<!-- <----------------------section5right-----------------> -->
+<style>
+   
+
+
+</style>
+    
+
+<!-- <.............................section6 style..............> -->
+    
+    <style>
+/* Initial state for zoom animation */
+.sec6-img {
+  /* width: 100%; Set width as necessary */
+  transition: transform 0.6s ease; /* Transition for smooth scaling */
+}
+
+/* Zoom-in and zoom-out animation */
+.zoom {
+  animation: zoomInOut 3s infinite; /* Animation name and duration */
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.1); /* Zoom in to 110% */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+  }
+}
+
+/* Stop animation on hover */
+.sec6-img:hover {
+  animation: none; /* Disable animation */
+  transform: scale(1); /* Keep image at normal size */
+}
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <nav>
+
+        <div class="main">
+            <div class="main1-1">
+                <img src="images/img1.png" class="img">
+
+                <div class="main1">
+
+                    <ul class="navbar-links">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT US</a> </li>
+                        <li><a href="#">SUPER SPECIALITY</a> </li>
+                        <li><a href="#">CONTACT </a></li>
+                    </ul>
+
+
+
+                </div>
+
+
+                <a class="button" href="#"><button class="navbar-btn">Book a Appointment</button></a>
+                <i class="fa-solid fa-bars navbar-set1-oc-icon"></i>
+            </div>
+        </div>
+
+
+
+
+        <div class="main2">
+
+            <div class="navbar-outer">
+                <div class="navbar-outer-img">
+                    <img src="images/img1.png">
+
+                    <i class="fa-solid fa-bars navbar-set1-oc-icon1"></i>
+                </div>
+                <ul class="navbar-links1">
+                    <li class="for-mobile"><a href="#">HOME</a></li>
+                    <li class="for-mobile"><a href="#">ABOUT US</a> </li>
+                    <li class="for-mobile"><a href="#">SUPER SPECIALITY</a> </li>
+                    <li class="for-mobile"><a href="#">CONTACT </a></li>
+                </ul>
+            </div>
+
+            <div class="btn1">
+                <a class="button-2" href="#"><button class="navbar-btn2">Book a Appointment</button></a>
+            </div>
+        </div>
+    </nav>
+
+<div class="section1">
+<div class="section1-sub-main">
+ <div class="section1-sub"> 
+    <p class="section1-sub-p1"> OPD Timing</p>
+    <p class="section1-sub-p2"> Morning : 12:00 to 8:00
+        
+        Evening : 08:30 To 10:00
+    </p>
+</div> 
+</div>
+
+<p class="section1-heading"> Excellence in Healthcare, Compassion in Care.</p>
+
+<button class=" section1-btn1"> Book a Appointment</button>
+
+</div>
+
+
+<div class="section2">
+<div class="section2-main">
+<div class="section2-box1"> 
+    <img src="images/sec-2-img1.png" class="sec2-img1"><p>Medical Advices & Check Ups</p></div>
+<div class="section2-box2"> 
+    <img src="images/sec2-img2.png"  class="sec2-img2"><p> Trusted Medical Treatment</p></div>
+<div class="section2-box3">
+     <img src="images/sec2-img3.png" class="sec2-img3"><p> Emergency Help Avaliable 24/7</p></div>
+
+</div>
+
+</div>
+
+<div class="section3"  data-aos="fade-down" data-aos-duration="1500"> 
+    <div class="row m-0 p-0">
+        <div class="col-md-6">
+            <p class="section3-para1"> Welcome To Jarag Hospital</p>
+            <p class="section3-para2"> Jarag Hospital, is known for housing experienced General Physicians.
+                 Dr. Praveenkumar Jarag, a well-reputed General Physician, practices in Satara.
+                 Visit this medical health centre for General Physicians recommended by 51 patients. </p>
+                 <button class=" section3-btn1"> Read more</button>
+
+        </div>
+        <div class="col-md-6">
+            <img src="images/sec3-img.png" class="sec3-img">
+        </div>
+    </div>
+</div>
+
+
+<div class="section4">
+    <div class="row m-0 p-0 section4-row">
+<div class="col-md-6">
+    <p class="section4-top-p1">Vision</p>
+    <p class="section4-top-p2"> To be the leading healthcare provider in our community, 
+        offering comprehensive and compassionate medical care to all our patients.</p>
+
+        <p class="section4-bottom-p1"> Mission</p>
+        <p class="section4-bottom-p2"> To provide high-quality, patient-centered healthcare and ensure
+             a comfortable and professional environment for all our patients.
+        </p>
+
+</div>
+<div class="col-md-6">
+    <img src="images/sec4-img.png" class="sec4-img">
+</div>
+
+    </div>
+</div>
+
+<div class="section5">
+<div class="row m-0 p-0 section5-row">
+    <div class="col-md-6">
+
+        <p class="section5-left-p1">Different types of services</p>
+        <p class="section5-left-p2"> In terms of patient we have different sort of department to serve best treatment 
+            in the country.</p>
+
+            <button class=" section5-btn1"> Read more</button>
+
+    </div>
+    <div class="col-md-6">
+<div class="section5-right">
+    <div class="section5-right1">
+       <div class="section5-right1-top">
+        <img src="images/sec5-img1.png" class="sec5-img1">
+        <p class="section5-right1-top-p1">Cardiology</p>
+        <p class="section5-right1-top-p2">Cardiologists diagnose and treat various heart conditions,
+             including coronary artery disease </p>
+       </div>
+       <div class="section5-right1-bottom">
+        <img src="images/sec5-img2.png" class="sec5-img2">
+<p class="section5-right1-bottom-p1"> Diabetology</p>
+<p class="section5-right1-bottom-p2"> Diabetology services are dedicated to provide comprehensive
+     care for individuals living with diabetes.</p>
+
+       </div>
+    </div>
+
+
+    <div class="section5-right2">
+        <div class="section5-right2-top">
+            <img src="images/sec5-img3.png" class="sec5-img3">
+        <p class="section5-right2-top-p1"> Neurology</p>
+        <div class="section5-right2-top-p2"> Neurologists diagnose and treat a wide range 
+            of neurological disorders.</div>
+        </div>
+
+        <div class="section5-right2-bottom">
+            <img src="images/sec5-img4.png" class="sec5-img4"> 
+            <div class="section5-right2-bottom-p1">Urology</div>
+            <div class="section5-right2-bottom-p2">
+                urology department provides expert care for a wide range of urological conditions. 
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+</div>
+
+<div class="section6">
+<div class="row m-0 p-0">
+    <div class="col-md-6">
+        <p class="section6-left-p1">Why Choose Us ?</p>
+        <p class="section6-left-p2">
+            <ul class="ul-style" id="whyChooseUsList">
+                <li>Patients well-being is our top priority</li>
+                <li>Highly experienced and dedicated healthcare professionals.</li>
+                <li>We offer a wide range of medical services under one roof.</li>
+                <li>Our hospital is Convenient and Accessible for every patient.</li>
+                <li>Ongoing NABH Accreditation Process ensures highest level of healthcare.</li>
+                <li>Jarag Hospital is a trusted name in healthcare, recommended by numerous satisfied patients.
+                     Our reputation is built on the trust and positive experiences of those we serve.</li>
+            </ul>
+        </p>
+    </div>
+    <div class="col-md-6">
+        <img src="images/sec6-img.png" class="sec6-img">
+    </div>
+</div>
+
+</div>
+
+<div class="section7">
+    <div class="container">
+    <div class="row m-0 p-0 section7-row">
+       <div class="col-md-4"><img src="images/sec7-img.png" class="sec7-img"> </div>
+       <div class="col-md-8">
+        <p class="section7-right-p1">Join Jarag Hospital and grow with us.</p>
+<p class="section7-right-p2">“Whether you are a patient seeking comprehensive care, a healthcare professional looking for career development,
+     or a community member interested in health and wellness initiatives, we are here to support your growth.
+     Together, we can achieve excellence in healthcare and build a healthier future.”</p>
+
+       </div>
+    </div>
+</div>
+</div>
+
+<div class="section8">
+
+    <div class="container">
+<div class="row m-0 p-0 section8-row">
+   <div class="col-md-5 section8-left">
+<p class="section8-left-p1">Contact Info</p>
+
+<div class="section8-left-line1">
+    <div class="section8-left-line1-p">
+    <img src="images/sec8-sym1.png" class="sec8-left-sym1">
+
+<!-- <div class="section8-left-line1-p"> -->
+<p class="section8-left-line1-p1">Address</p></div>
+<p class="section8-left-line1-p2">C/o Jarag Hospital, Surya Complex, 
+    Civil Hospital Road, Satara Ho, Satara - 415001</p>
+</div>
+
+<div class="section8-left-line2">
+<div class="section8-left-line2-p">
+    <img src="images/sec8-sym2.png" class="sec8-left-sym2">
+<p class="section8-left-line2-p1">Phone Number</p></div>
+<p class="section8-left-line2-p2">(02162)226566 / 942120750</p>
+</div>
+
+
+<div class="section8-left-line3">
+    <div class="section8-left-line3-p">
+    <img src="images/sec8-sym3.png" class="sec8-left-sym3">
+<p class="section8-left-line3-p1">EMAIL ADDRESS</p></div>
+<p class="section8-left-line3-p2">drpraveenkumarjarag@gmail.com</p>
+</div>
+
+
+
+   </div>
+
+
+   <div class="col-md-7 section8-right">
+    <p class="section8-right-p1">We'd love to hear from you!</p>
+
+    <div class="section8-right-line1">
+
+        <div class="section8-right-line1-firstname">
+            <label for="">First Name</label><br>
+            <input type="text"></div>
+        <div class="section8-right-line1-lastname">
+            <label for="">Last Name</label><br>
+            <input type="text"></div>
+
+    </div>
+
+    <div class=" section8-Email">
+        <label for="">Email <span style="color: red;">*</span> </label><br>
+        <input type="text"></div>
+
+        <div class=" section8-Subject">
+            <label for="">Subject</label><br>
+            <input type="text"></div>
+    
+            <div class=" section8-Message">
+                <label for="">Your Message <span style="color: red;">*</span></label><br>
+                <input type="text"></div>
+
+
+                <div class="section8-Submit">
+                    <button>Submit Form</button>
+
+   </div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+    <div class="section9">
+        <div class="row m-0 p-0">
+            <div class="col-md-3">
+                <div class="section9-side1 img"><img src="images/img1.png"></div>
+
+                <p class="section9-side1">
+                    Jarag Hospital, is known for housing experienced General Physicians. Dr. Praveenkumar Jarag, a
+                    well-reputed
+                     General Physician, practices in Satara.
+                    Visit this medical health centre for General Physicians recommended by 51 patients. 
+                </p>
+
+            </div>
+            <div class="col-md-3">
+                <p class="section9-side2-top">
+                    Reach OUT
+                </p>
+                <div class="section9-side2-bottom">
+                    <div class="section9-side2-bottom-row1">
+                        <div class="section9-side2-bottom-img1"> <img src="images/rech-out-img2.png"> </div>
+                        <div class="section9-side2-bottom-row1-col2">
+                            <p>(02162)226566 / 9421207501</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="section9-side2-bottom-row1">
+                        <div class="section9-side2-bottom-img1"> <img src="images/rech-out-img3.png"> </div>
+                        <div class="section9-side2-bottom-row1-col2">
+                            <p style="word-break: break-all;">drpraveenkumarjarag@gmail.com</p>
+                        </div>
+
+                    </div>
+                
+
+
+                    <div class="section9-side2-bottom-row1">
+                        <div class="section9-side2-bottom-img1"> <img src="images/rech-out-img1.png"> </div>
+                        <div class="section9-side2-bottom-row1-col2">
+                            <p> plot no -5 survey no-40/2/3, Near sadhana English medium school behind kanase
+                                Hyundai
+                                showroom yashodanagar satara- 415004</p>
+                        </div>
+
+                    </div>
+                
+
+
+                
+
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <p class="section9-side3-top">lINKS</p>
+                <p class="section9-side3-bottom">
+                    Home<br>
+                    About Us<br>
+                    Super Specialty<br>
+                    Contacts<br>
+                </p>
+
+            </div>
+            <div class="col-md-3">
+                <p class="section9-side4-top">
+                    Social MEDIA
+                </p>
+
+                <div class="section9-side4-bottom">
+                    <img src="images/Facebook.png" class="sec9-side4-img1">
+                    <img src="images/Twitter.png" class="sec9-side4-img2">
+                    <img src="images/Instagram.png" class="sec9-side4-img3">
+                    <img src="images/linkedin.png" class="sec9-side4-img4">
+                    <img src="images/Whatsapp.png" class="sec9-side4-img5">
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- <.........................js............................> -->
+
+     <script src="script.js">
+
+
+
+    
+     </script> 
+     <script>
+        AOS.init();
+      </script>
+
+</body>
+
+</html>
