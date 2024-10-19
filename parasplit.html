@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pie Chart with Percentages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    .chart-container {
+      width: 50%; /* Adjust the width of the pie chart */
+      margin: auto; /* Center the chart */
+    }
+    .legend {
+      list-style: none; /* Remove default list styles */
+      padding: 0; /* Remove default padding */
+      display: flex; /* Use flexbox for horizontal alignment */
+      justify-content: center; /* Center the legend items */
+      margin-top: 20px; /* Space above the legend */
+    }
+    .legend-item {
+      display: flex;
+      align-items: center; /* Align items vertically */
+      margin: 0 10px; /* Space between legend items */
+    }
+    .legend-dot {
+      width: 20px; /* Increase size of the custom disc */
+      height: 20px; /* Increase size of the custom disc */
+      border-radius: 50%; /* Make it circular */
+      margin-right: 5px; /* Space between dot and text */
+      display: inline-block; /* Allow size properties to apply */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pie Chart: Sales Distribution</h2>
+  <div class="chart-container">
+    <canvas id="salesPieChart"></canvas>
+  </div>
+
+  <ul class="legend" id="legendContainer"></ul>
+
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('salesPieChart').getContext('2d');
+
+    // Data for the pie chart
+    const data = {
+      labels: ['Product A', 'Product B', 'Product C', 'Product D'],
+      datasets: [{
+        data: [300, 50, 100, 150], // Values for each section
+        backgroundColor: [
+          '#36a2eb', // Blue for Product A
+          '#ffcd56', // Yellow for Product B
+          '#ff6384', // Red for Product C
+          '#4bc0c0'  // Teal for Product D
+        ],
+        borderColor: '#fff', // White border between sections
+        borderWidth: 2
+      }]
+    };
+
+    // Calculate total for percentage calculation
+    const total = data.datasets[0].data.reduce((acc, value) => acc + value, 0);
+
+    // Create a custom plugin to display percentages
+    const percentagePlugin = {
+      id: 'percentageLabel',
+      afterDraw: (chart) => {
+        const ctx = chart.ctx;
+        chart.data.datasets.forEach((dataset, datasetIndex) => {
+          const total = dataset.data.reduce((acc, value) => acc + value, 0);
+          let startAngle = -0.5 * Math.PI; // Start angle at 12 o'clock
+          
+          dataset.data.forEach((dataPoint, index) => {
+            const endAngle = startAngle + (dataPoint / total) * 2 * Math.PI;
+            const middleAngle = startAngle + (endAngle - startAngle) / 2;
+
+            const x = chart.width / 2 + Math.cos(middleAngle) * (chart.innerRadius + 20); // Position the percentage text
+            const y = chart.height / 2 + Math.sin(middleAngle) * (chart.innerRadius + 20);
+            
+            const percentage = ((dataPoint / total) * 100).toFixed(1) + '%';
+            ctx.fillStyle = 'white'; // Text color
+            ctx.font = 'bold 16px Arial'; // Font style
+            ctx.fillText(percentage, x, y); // Draw the text
+
+            startAngle = endAngle; // Move to the next slice
+          });
+        });
+      }
+    };
+
+    // Chart options
+    const options = {
+      plugins: {
+        legend: {
+          display: false // Disable the default legend
+        },
+        tooltip: {
+          callbacks: {
+            label: function(tooltipItem) {
+              return tooltipItem.label + ': ' + tooltipItem.raw;
+            }
+          }
+        },
+        percentageLabel: {
+          // Configuration options for the percentage plugin can go here
+        }
+      }
+    };
+
+    // Create the pie chart
+    const salesPieChart = new Chart(ctx, {
+      type: 'pie', // Type of chart
+      data: data,
+      options: options,
+      plugins: [percentagePlugin] // Register the custom plugin
+    });
+
+    // Custom legend using <ul>
+    const legendContainer = document.getElementById('legendContainer');
+    data.labels.forEach((label, index) => {
+      const legendItem = document.createElement('li');
+      legendItem.className = 'legend-item';
+
+      const dot = document.createElement('div');
+      dot.className = 'legend-dot';
+      dot.style.backgroundColor = data.datasets[0].backgroundColor[index]; // Set dot color
+
+      const text = document.createElement('span');
+      text.innerText = label; // Set legend label text
+
+      legendItem.appendChild(dot); // Add dot to legend item
+      legendItem.appendChild(text); // Add text to legend item
+      legendContainer.appendChild(legendItem); // Add legend item to legend container
+    });
+  </script>
+
+</body>
+</html>
